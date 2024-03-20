@@ -239,6 +239,7 @@
     // Import the functions you need from the SDKs you need
 
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics.js";
 
     import { getDatabase,ref,set,runTransaction ,onValue} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
@@ -262,6 +263,7 @@
     // Initialize Firebase
 
     const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
     const db = getDatabase(app)
     //create your custom method
     const cntr = ref(db,"counter")
